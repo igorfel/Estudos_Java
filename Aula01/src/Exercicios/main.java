@@ -10,7 +10,7 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Exer01Funcoes.Run();
-        Exer01Fatorial.Run();
+        Exer01Funcoes.RunPrompt();
+        Exer01Fatorial.RunPrompt();
     }
 }

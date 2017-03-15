@@ -14,27 +14,26 @@ import javax.swing.JOptionPane;
  * @author igorf
  */
 public class Exer01Fatorial {
-    private static double fatorialRec(double num){
-        if(num == 0 || num ==1) return 1;
-        else 
-        return num * fatorialRec(num-1);
-    }
     
-    public static void Run(){
+    public static void RunPrompt(){
         String num;
         double fat;
         num = JOptionPane.showInputDialog(null, "Digite um número: ", "Cálculo de Fatorial", 1);
-        fat = fatorialRec(Double.parseDouble(num));
+        fat = CalcRec(Double.parseDouble(num));
         JOptionPane.showMessageDialog(null, "O fatorial é: " + fat);
     }
     
     public static double CalcRec(double num){
-        return fatorialRec(num);
+        if(num == 0 || num ==1) return 1;
+        else 
+        return num * CalcRec(num-1);
     }
     
-    public static void CalcIter(double num){
+    public static double CalcIter(double num){
         double fat = 1;
-        for(int i = 2; i < num; ++i)
-            i *= i+1;
+        for(int i = 2; i <= num; ++i)
+            fat *= i;
+        
+        return fat;
     }
 }

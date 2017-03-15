@@ -17,7 +17,7 @@ public class Exer01Funcoes {
     /**
      * @param args the command line arguments
      */
-    public static void Run() {
+    public static void RunPrompt() {
         int array[] = {1, 2, 3, 4, 5};
         String a = "2", b = "5";
         trocaB(a, b);
